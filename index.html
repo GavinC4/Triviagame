@@ -1,18 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Trivia Game</title>
-    <!--Link to reset css template -->
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-    <!-- Bootstrap -->
-    <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Oswald|Raleway|Rokkitt:400,700" rel="stylesheet">
-    <!-- Your style sheet link -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <script src="https://use.fontawesome.com/9763ef17ba.js"></script>
 </head>
@@ -30,38 +25,30 @@
                                     <h1> Music History Trivia!</h1>
                                 </div>
                                 <hr>
-                               <!-- Row of the timer -->
+                                <!-- Row of the timer -->
                                 <!-- to house the question count -->
                                 <div class="col-sm-12 col-md-4 col-lg-4 " id="questionCounter"></div>
-                               
-
-                                 <!-- For the timer -->
+                                <!-- For the timer -->
                                 <div class="col-sm-12 col-md-4 col-lg-4 text-center">
                                     <div id="timer" class="text-center">
                                         <!-- dynamically update the timer here -->
-
                                         <!-- id for the start button -->
                                         <div id="start"> </div>
                                         <!-- <button class="waves-effect waves-light btn-lg text-center" id="start"> START TRIVIA </button> -->
                                     </div>
                                 </div>
                                 <div class="col-sm-12 col-md-4 col-lg-4 "></div> <!-- end timer row -->
-
                                 <!-- for the quesitons -->
                                 <div class="col-sm-12 col-md-12 col-lg-12 text-center">
                                     <div id="question">
-                                        <!--  <h2> What is the first name of Mozart's dog?</h2> -->
                                     </div>
                                 </div>
-
                                 <!-- for the answers -->
                                 <div class="col-sm-12 col-md-12 col-lg-12 center-block">
-                                    <div id="answers">
-                                   <!--  <p>White Christmas by Bing Crosby </p>  -->
-                                    </div>
+                                    <div id="answers">              
+                                    </div>        
                                     <br>
                                     <div class="col-sm-2 col-md-2 col-lg-2"></div>
-
                                     <!-- Correct answer dynamically updated if time up or guessed incorrect -->
                                     <div class="col-sm-12 col-md-12 col-lg-12 text-center">
                                         <div id="correctAnswer">
@@ -71,15 +58,11 @@
                                     <div class="col-sm-12 col-md-12 col-lg-12 center-block text-center">
                                         <div id="fact"></div>
                                         </div>
-
                                         <!--the row for the picture to make sure it is centered  -->
                                     <div class="col-sm-12 col-md-3 col-lg-3 center-block text-xs-center"></div>
                                     <!-- Where the picture will go on the answer page -->
                                     <div class="col-sm-12 col-md-6 col-lg-6 center-block text-xs-center"  id="picture">
-                                            
-                                                <!-- class = "pictureframe" -->
-                                                <!-- Insert picture here -->
-                                            
+                                    <!-- class = "pictureframe" --><!-- Insert picture here -->
                                     </div>
                                     <div class="col-sm-12 col-md-3 col-lg-3 center-block text-xs-center"></div> <!-- This ends the three columns for the picture-->
                                 </div>
@@ -89,20 +72,11 @@
                     </div>
                     <div id="footer">
                     </div>
-                    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
                     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
                     </script>
-                    <!-- References the underscore library -->
                     <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
-                    <!-- Include all compiled plugins (below), or include individual files as needed -->
-
-                    <!-- Latest compiled and minified JavaScript -->
                     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-                    <!-- link to user JS file. Name will change -->
                     <script type="text/javascript" src="assets/javascript/app.js"></script>
-                    <!-- link to js file that supports the backstretch piece -->
-                    <script type="text/javascript" src="assets/javascript/javascript.js"></script>
-                    <!-- Created a background with scrolling images -->
                     <audio id="audioplayer"></audio>
 </body>
 </html>

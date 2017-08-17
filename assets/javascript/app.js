@@ -1,6 +1,4 @@
-triviaObj = {
-
-
+triviaObj = {    
     masterQuestions: [{
             question: "How old was Mozart when he wrote his first symphony?",
             answers: ["8 Years Old", "19 Years Old", "6 Years Old", "12 Years Old"],
@@ -8,7 +6,6 @@ triviaObj = {
             visual: 'assets/images/mozart.jpg',
             sound: 'assets/audio/mozart.mp3',
             fact: "Over his short life span Mozart wrote 9 symphonies, 32 piano sonatas, 1 opera, 5 piano concertos and many chamber works."
-
         }, {
             question: "What is best-selling single of all time?",
             answers: ["My Heart Will Go On by Celine Dion", "It's Now Or Never by Elvis Presley", "I Will Survive by Gloria Gaynor", "White Christmas by Bing Crosby"],
@@ -23,7 +20,6 @@ triviaObj = {
             visual: 'assets/images/beatles.gif',
             sound: 'assets/audio/beatles.mp3',
             fact: "This song was released in 1963 and charted at #1 on the US Billboards on January 13, 1964."
-
         }, {
             question: "What artist has acheived the highest sales in history of an album in its first week?",
             answers: ["Taylor Swift", "NSYNC", "Adele", "Britney Spears"],
@@ -31,17 +27,13 @@ triviaObj = {
             visual: 'assets/images/adele.gif',
             sound: 'assets/audio/hello.mp3',
             fact: "Adele sold 3.38 million copies of her album 25 in the first week of its release."
-
-        },
-        // update from here on
-        {
+        }, {
             question: "Who was most streamed artist of 2015?",
             answers: ["Ed Sheeran", "Drake", "Taylor Swift", "Katy Perry"],
             correctAnswer: "Drake",
             visual: 'assets/images/drake.gif',
             sound: "assets/audio/drake.mp3",
             fact: "Drake's music was streamed over 1.8 billion times in 2015.",
-
         }, {
             question: "What English Rock band from the 1970s had a one armed drummer?",
             answers: ["The Who", "Def Leppard", "Led Zepplin", "Queen"],
@@ -49,7 +41,6 @@ triviaObj = {
             visual: 'assets/images/def.gif',
             sound: "assets/audio/def.mp3",
             fact: 'The drummer, Rick Allen was involved in a driving accident in 1984 that led to the amputation of his right arm.',
-
         }, {
             question: "What is the first ever rap song to win the Academy Award for Best Original Song?",
             answers: ["Thrift Shop by Macklemore", "Gansta's Paradise by Coolio", "Lose Yourself by Eminem", "Holy Grail by Jay-z"],
@@ -57,7 +48,6 @@ triviaObj = {
             visual: 'assets/images/eminem.gif',
             sound: "assets/audio/eminem.mp3",
             fact: "Lose Yourself was written in 2002 for the motion picture 8 Mile."
-
         }, {
             question: "Who was the first American to hear of Joseph Stalin's Death?",
             answers: ["Dwight Eisenhower", "Johnny Cash", "Tony Blair", "Pat Benatar"],
@@ -65,7 +55,6 @@ triviaObj = {
             visual: 'assets/images/johnny.gif',
             sound: "assets/audio/johnny.mp3",
             fact: "Johnny was working as a radio operator with the US Airforce intercepting Soviet Army transmissions during the time of Stalin's death.",
-
         }, {
             question: "What famous song was recorded in only one take?",
             answers: ["Hey Jude by The Beatles", "All I Want for Christmas is You by Mariah Carey", "My Heart Will Go On by Celine Dion", "The Ocean by Led Zepplin"],
@@ -73,7 +62,6 @@ triviaObj = {
             visual: 'assets/images/celine.gif',
             sound: "assets/audio/celine.mp3",
             fact: "Intially Celine didn't even want to record this famous love song but was convinced by her husband and producers of film Titantic.",
-
         }, {
             question: "Who is the youngest artist to win a Grammy Award?",
             answers: ["Meghan Trainor", "Ed Sheeran", "Taylor Swift", "Bruno Mars"],
@@ -81,7 +69,6 @@ triviaObj = {
             visual: 'assets/images/taylor.gif',
             sound: "assets/audio/taylor.mp3",
             fact: "Taylor is the youngest artist to win a Grammy at the age of 20 for her album Fearless.",
-
         }
     ],
     // Push the correct guess here and then get the length of the array and display that number at end
@@ -92,7 +79,6 @@ triviaObj = {
 
     // If the timer goes off before you guess it falls into this catagory
     unansweredGuesses: 0,
-    // unansweredGuesses: triviaObj.masterQuestions.length - (guessesCorrect + guessesIncorrect),
 
     // This will house the current question selected at random and removed from the master question once the masterQuestions array is empty move onto the final answer page
     currentQuestion: [],
@@ -118,7 +104,7 @@ triviaObj = {
             // Decrease number by one.
             triviaObj.timerCount--;
 
-            // // Once number hits zero...
+            // Once number hits zero...
             if (triviaObj.timerCount === -1) {
                 triviaObj.emptyDivs();
                 triviaObj.timesUp();
@@ -128,7 +114,6 @@ triviaObj = {
                 // is the timeout function to automatically switch the page
                 triviaObj.pageTimeout.timeout();
             }
-
         },
         // This stops the timer
         stop: function() {
@@ -152,10 +137,8 @@ triviaObj = {
             // game over
             if (triviaObj.masterQuestions.length == 0) {
                 // Game is over and display progress
-                // triviaObj.emptyDivs();
                 triviaObj.summaryPage();
                 triviaObj.pageLoad.stop();
-
             } else {
                 triviaObj.questionLoad();
             }
@@ -198,7 +181,6 @@ triviaObj = {
             div.appendChild(text);
             // appending the child to the parent in this case the p tag to the parent variable
             parent.appendChild(div);
-
         });
     },
     // Randomly picks the next question
@@ -209,18 +191,14 @@ triviaObj = {
 
         console.log("Initial Pick: " + JSON.stringify(initialPick));
         return initialPick;
-
-
     },
-
     // splice function to remove the current question object from the array so that it cannot be populated again
     spliceArray: function() {
         triviaObj.masterQuestions.splice(this.masterIndex, 1);
         console.log("The remove index value is: " + JSON.stringify(this.masterIndex));
         console.log("masterQuestions should have been altered! It is now: " + JSON.stringify(triviaObj.masterQuestions));
         console.log("Master Questions length is: " + triviaObj.masterQuestions.length)
-        console.log("Current Question Length: " + triviaObj.currentQuestion.length);
-        
+        console.log("Current Question Length: " + triviaObj.currentQuestion.length); 
     },
 
     // Function to empty currently populated divs with questions and answers
@@ -232,8 +210,6 @@ triviaObj = {
         $('#correctAnswer').empty();
         $('#audioplayer').attr('src', '');
         $('#timer').empty();
-
-
     },
 
     // The time up function
@@ -244,14 +220,11 @@ triviaObj = {
 
         triviaObj.displayAssets();
         triviaObj.pageLoad.stop();
- 
-
     },
     // Correct Guess function
     correctGuess: function() {
         $('#question').attr('style', 'font-size: 40px;').html('Correct!');
         triviaObj.displayAssets();
-
     },
 
     // Incorrect guess function
@@ -259,7 +232,6 @@ triviaObj = {
         $('#timer').attr('style', 'font-size: 40px;').html('Wrong!');
         $('#correctAnswer').html('The Correct Answer Is: ' + '<span>' + triviaObj.currentQuestion[0].correctAnswer + '</span>');
         triviaObj.displayAssets();
-
     },
 
     // Create displayAssets function to display the selected audio and video assets for the questions guesses. This would be added to win, times up and loss display
@@ -274,15 +246,12 @@ triviaObj = {
         // Sets the fun fact
         $('#fact').html('<h3>' + 'Fun Fact: ' + triviaObj.currentQuestion[0].fact + '</h3>');
 
-
         // sets the audio on the page
-
         var audio = triviaObj.currentQuestion[0].sound;
         // audio.autoplay = true;
         audioplayer = $('#audioplayer');
         audioplayer.attr('src', audio);
         audioplayer.attr('autoplay', 'autoplay');
-
     },
 
     summaryPage: function() {
@@ -297,9 +266,7 @@ triviaObj = {
 
             // display unanswered guesses
             $('#answers').append("<p>" + "Unanswered Guesses: " + triviaObj.unansweredGuesses + "</p>");
-
-        }
-   
+        }   
 }
 
 // GAME BEGINS with Initial setup of page and start click push
@@ -313,12 +280,10 @@ $(document).ready(function() {
 
     $('#start').append(b);
 
-
     // STAGE 1: Loads the page after a user click and displays first question and timer
     $('#start').on('click', function(event) {
         $(this).hide();
         triviaObj.questionLoad();
-
     });
 
     // STAGE 2: User guesses 
@@ -326,11 +291,7 @@ $(document).ready(function() {
     // This initiates the user click/guess after the buttons are created on the screen
     $(document.body).on('click', '.guess', function(event) {
         var click = $(this).text();
-
-
-
-        // triviaObj.splice();
-        // console.log("you clicked: " + click);
+       
         triviaObj.pageLoad.stop();
 
         // correct guess
@@ -345,8 +306,6 @@ $(document).ready(function() {
             triviaObj.spliceArray();
             // is the timeout function to automatically switch the page
             triviaObj.pageTimeout.timeout();
-
-
         }
         // incorrect guess
         else if (click != triviaObj.currentQuestion[0].correctAnswer) {
@@ -359,10 +318,6 @@ $(document).ready(function() {
             triviaObj.spliceArray();
             // is the timeout function to automatically switch the page
             triviaObj.pageTimeout.timeout();
-
         }
     });
-
-
-
 });
